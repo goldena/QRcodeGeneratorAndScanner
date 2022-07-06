@@ -11,6 +11,9 @@
 		CF432F2228762F3F00202748 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF432F2128762F3F00202748 /* ContentView.swift */; };
 		CF432F2428762F4600202748 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF432F2328762F4600202748 /* Assets.xcassets */; };
 		CF432F2728762F4600202748 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF432F2628762F4600202748 /* Preview Assets.xcassets */; };
+		CF432F2E2876300700202748 /* UIImage+qrCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF432F2D2876300700202748 /* UIImage+qrCode.swift */; };
+		CF432F302876378A00202748 /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF432F2F2876378A00202748 /* QRCodeScannerViewController.swift */; };
+		CF432F3228763C0D00202748 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF432F3128763C0D00202748 /* QRCodeScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		CF432F2128762F3F00202748 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF432F2328762F4600202748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF432F2628762F4600202748 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF432F2D2876300700202748 /* UIImage+qrCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+qrCode.swift"; sourceTree = "<group>"; };
+		CF432F2F2876378A00202748 /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
+		CF432F3128763C0D00202748 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				CF432F1F28762F3F00202748 /* QRcodeGeneratorAndScannerApp.swift */,
 				CF432F2128762F3F00202748 /* ContentView.swift */,
+				CF432F2D2876300700202748 /* UIImage+qrCode.swift */,
+				CF432F2F2876378A00202748 /* QRCodeScannerViewController.swift */,
+				CF432F3128763C0D00202748 /* QRCodeScannerView.swift */,
 				CF432F2328762F4600202748 /* Assets.xcassets */,
 				CF432F2528762F4600202748 /* Preview Content */,
 			);
@@ -138,7 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF432F2228762F3F00202748 /* ContentView.swift in Sources */,
+				CF432F302876378A00202748 /* QRCodeScannerViewController.swift in Sources */,
 				CF432F2028762F3F00202748 /* QRcodeGeneratorAndScannerApp.swift in Sources */,
+				CF432F2E2876300700202748 /* UIImage+qrCode.swift in Sources */,
+				CF432F3228763C0D00202748 /* QRCodeScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +282,7 @@
 				DEVELOPMENT_TEAM = YLBX7YJ47Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used for QR codes scanning";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +312,7 @@
 				DEVELOPMENT_TEAM = YLBX7YJ47Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used for QR codes scanning";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

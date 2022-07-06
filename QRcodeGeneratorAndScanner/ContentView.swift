@@ -6,12 +6,36 @@
 //
 
 import SwiftUI
+import CoreImage.CIFilterBuiltins
 
 struct ContentView: View {
+    
+    @State var qrString = UUID().uuidString
+    @State var isQRCodeScannerPresented: Bool = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Spacer()
+        
+        if let uiImage = UIImage.qrCode(from: qrString) {
+            Image(uiImage: uiImage)
+                .interpolation(.none)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200)
+        }
+        
+        Spacer()
+        
+        Button {
+            isQRCodeScannerPresented = true
+        } label: {
+            Text("QR Code Scanner")
+        }
+        .sheet(isPresented: $isQRCodeScannerPresented) {
+            QRCodeScannerView()
+        }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
