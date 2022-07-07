@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-@main
-struct QRcodeGeneratorAndScannerApp: App {
+@main struct QRCodeGeneratorAndScannerApp: App {
+
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
+
 }

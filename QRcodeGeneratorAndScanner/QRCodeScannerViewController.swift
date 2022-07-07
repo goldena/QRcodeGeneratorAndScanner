@@ -9,7 +9,9 @@ import SwiftUI
 import AVFoundation
 
 class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    
+
+    weak var delegate: QRCodeScannerViewControllerDelegate?
+
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
@@ -110,7 +112,7 @@ class QRCodeScannerViewController: UIViewController, AVCaptureMetadataOutputObje
     }
 
     func found(code: String) {
-        print(code)
+        delegate?.didScanQRCode(qrCode: code)
     }
 
     override var prefersStatusBarHidden: Bool { true }
